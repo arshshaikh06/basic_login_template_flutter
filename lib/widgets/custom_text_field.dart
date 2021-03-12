@@ -6,8 +6,8 @@ class CustomTextField extends StatefulWidget {
   final bool isPassword;
 
   const CustomTextField({
-    Key key,
-    @required this.hintText,
+    Key? key,
+    required this.hintText,
     this.isPassword = false,
     this.keyboardType = TextInputType.text,
   }) : super(key: key);
