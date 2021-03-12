@@ -60,9 +60,10 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               Column(
                 children: [
-                  TextButton(
+                  ElevatedButton(
                     onPressed: () {},
-                    style: TextButton.styleFrom(
+                    style: ElevatedButton.styleFrom(
+                      elevation: 0,
                       padding: EdgeInsets.symmetric(
                         vertical: 16.0,
                         horizontal: 48.0,
@@ -74,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Center(
                       child: Text(
                         'Login',
-                        style: Theme.of(context).textTheme.bodyText1,
+                        style: Theme.of(context).textTheme.bodyText2,
                       ),
                     ),
                   ),

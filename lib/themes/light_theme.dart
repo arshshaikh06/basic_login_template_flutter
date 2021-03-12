@@ -15,10 +15,15 @@ ThemeData lightTheme = ThemeData(
       fontSize: 40,
       fontWeight: FontWeight.bold,
     ),
+    bodyText2: const TextStyle(
+      color: ColorPalette.buttonColor,
+      fontWeight: FontWeight.bold,
+    ),
   ),
-  textButtonTheme: TextButtonThemeData(
+  elevatedButtonTheme: ElevatedButtonThemeData(
     style: ButtonStyle(
-      foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
+      foregroundColor: MaterialStateProperty.all(Colors.white),
+      backgroundColor: MaterialStateProperty.all(Colors.black),
     ),
   ),
 );

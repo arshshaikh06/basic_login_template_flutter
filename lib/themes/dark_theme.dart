@@ -15,11 +15,15 @@ ThemeData darkTheme = ThemeData(
       fontSize: 40,
       fontWeight: FontWeight.bold,
     ),
+    bodyText2: const TextStyle(
+      color: ColorPalette.buttonColorDark,
+      fontWeight: FontWeight.bold,
+    ),
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-      primary: ColorPalette.buttonColorDark,
-      onPrimary: Colors.blue,
+    style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.all(Colors.black),
+      backgroundColor: MaterialStateProperty.all(Colors.white),
     ),
   ),
 );
