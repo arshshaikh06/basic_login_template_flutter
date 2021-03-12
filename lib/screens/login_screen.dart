@@ -34,12 +34,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset(
-                        'assets/icons/google.png',
+                        'assets/icons/google_logo.png',
                         width: 30,
                       ),
                       const SizedBox(width: 48),
                       Image.asset(
-                        'assets/icons/facebook.png',
+                        'assets/icons/facebook_logo.png',
                         width: 30,
                       ),
                     ],
