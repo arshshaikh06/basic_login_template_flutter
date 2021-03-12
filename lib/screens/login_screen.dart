@@ -12,6 +12,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
+    final ThemeData themeData = Theme.of(context);
 
     return Scaffold(
       body: SingleChildScrollView(
@@ -25,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Text(
                 'Hello \nWelcome Back',
-                style: Theme.of(context).textTheme.headline1,
+                style: themeData.textTheme.headline1,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -54,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   const SizedBox(height: 20),
                   Text(
                     'Forgot Password?',
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: themeData.textTheme.bodyText1,
                   ),
                 ],
               ),
@@ -75,14 +76,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Center(
                       child: Text(
                         'Login',
-                        style: Theme.of(context).textTheme.bodyText2,
+                        style: themeData.textTheme.bodyText2,
                       ),
                     ),
                   ),
                   const SizedBox(height: 30),
                   Text(
                     'Create Account',
-                    style: Theme.of(context).textTheme.bodyText1,
+                    style: themeData.textTheme.bodyText1,
                   ),
                 ],
               ),
