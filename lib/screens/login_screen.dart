@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+// Widgets
+import '../widgets/custom_text_field.dart';
+
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -8,9 +11,83 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
+
     return Scaffold(
-      appBar: AppBar(
-        title: Text('hello'),
+      body: SingleChildScrollView(
+        child: Container(
+          width: size.width,
+          height: size.height,
+          padding: EdgeInsets.fromLTRB(24.0, 150.0, 24.0, 80.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Hello \nWelcome Back',
+                style: Theme.of(context).textTheme.headline1,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/icons/google.png',
+                        width: 30,
+                      ),
+                      const SizedBox(width: 48),
+                      Image.asset(
+                        'assets/icons/facebook.png',
+                        width: 30,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 50),
+                  CustomTextField(hintText: 'Email or Phone number'),
+                  const SizedBox(height: 20),
+                  CustomTextField(
+                    hintText: 'Password',
+                    isPassword: true,
+                  ),
+                  const SizedBox(height: 20),
+                  Text(
+                    'Forgot Password?',
+                    style: Theme.of(context).textTheme.bodyText1,
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 16.0,
+                        horizontal: 48.0,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Login',
+                        style: Theme.of(context).textTheme.bodyText1,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 30),
+                  Text(
+                    'Create Account',
+                    style: Theme.of(context).textTheme.bodyText1,
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

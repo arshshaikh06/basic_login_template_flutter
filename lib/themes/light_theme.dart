@@ -16,8 +16,9 @@ ThemeData lightTheme = ThemeData(
       fontWeight: FontWeight.bold,
     ),
   ),
-  buttonTheme: const ButtonThemeData(
-    textTheme: ButtonTextTheme.primary,
-    buttonColor: Colors.black,
+  textButtonTheme: TextButtonThemeData(
+    style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.all<Color>(Colors.green),
+    ),
   ),
 );
